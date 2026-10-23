@@ -1,25 +1,78 @@
 aid: senseonics
+
 name: Senseonics
-description: 'Senseonics is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by nea) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.senseonics.com/~/media/Images/S/Senseonics-IR/logo/logo-social-media.jpg
+
+description: 'Senseonics is a medical technology company that develops and commercializes the Eversense continuous glucose monitoring (CGM) system, an implantable sensor providing up to 365 days of glucose data for people with diabetes. The company’s website offers product information, clinical study results, investor relations, and corporate leadership details, reflecting its focus on innovative diabetes management solutions.'
+
 url: https://raw.githubusercontent.com/api-evangelist/senseonics/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-23 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-22'
+
 modified: '2026-10-22'
+
 tags:
-- Company
-apis: []
+- Medical
+- Diabetes
+- HealthTech
+- ImplantableDevices
+- CGM
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- nea
+
 common:
+- type: Hosts
+  url: hosts/senseonics-hosts.yml
+- type: Vendors
+  url: vendors/senseonics-vendors.yml
+- type: PrivacyPolicy
+  url: https://www.senseonics.com/investor-relations/privacy-notice
+- type: Newsroom
+  url: https://www.senseonics.com/~/media/Files/S/Senseonics-IR/reports-and-presentations/promise-final-publication-dia-2021-0182.pdf
+- type: DomainSecurity
+  url: security/senseonics-domain-security.yml
 - type: Website
   url: https://www.senseonics.com/
+- type: InvestorRelations
+  url: https://www.senseonics.com/investor-relations
+- type: Careers
+  url: https://www.senseonics.com/careers
+- type: Leadership
+  url: https://www.senseonics.com/leadership
+
+apis: []
+
+x-backed-by:
+- nea
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-23'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://www.senseonics.com/
+    status: 200
+x-enrichment:
+  date: '2026-10-23'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
